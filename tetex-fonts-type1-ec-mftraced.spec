@@ -1,18 +1,17 @@
 Summary:	TeX EC fonts, PostScript Type1 format
 Summary(pl):	Fonty TeXowe EC w formacie PostScript Type1
 Name:		tetex-fonts-type1-ec-mftraced
-Version:	1.0.8
+Version:	1.0.9
 Release:	1
 License:	Public Domain
 Group:		Applications/Publishing
 Source0:	http://lilypond.org/download/fonts/ec-fonts-mftraced-%{version}.tar.gz
-# Source0-md5:	f595a80eb1d0d7dfeff23939a082f4e5
+# Source0-md5:	f1c53bd9168ec5bf6a73e1eebd7b6c0a
 BuildRequires:	mftrace
 BuildRequires:	tetex-dvips
 BuildRequires:	tetex-fonts-jknappen
 Requires:	tetex
 Obsoletes:	ec-fonts-mftraced
-Requires(post,postun):	%{_bindir}/texhash
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -36,14 +35,14 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	prefix=$RPM_BUILD_ROOT%{_prefix}
 
-%post
-%{_bindir}/texhash >&2
-
-%postun
-%{_bindir}/texhash >&2
-
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post
+[ ! -x %{_bindir}/texhash ] || %{_bindir}/texhash 1>&2
+
+%postun
+[ ! -x %{_bindir}/texhash ] || %{_bindir}/texhash 1>&2
 
 %files
 %defattr(644,root,root,755)
