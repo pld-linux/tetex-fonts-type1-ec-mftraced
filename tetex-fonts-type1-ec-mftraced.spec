@@ -1,15 +1,16 @@
 Summary:	TeX EC fonts, PostScript Type1 format
 Summary(pl):	Fonty TeXowe EC w formacie PostScript Type1
 Name:		tetex-fonts-type1-ec-mftraced
-Version:	1.0.9
+Version:	1.0.11
 Release:	1
 License:	Public Domain
 Group:		Applications/Publishing
 Source0:	http://lilypond.org/download/fonts/ec-fonts-mftraced-%{version}.tar.gz
-# Source0-md5:	f1c53bd9168ec5bf6a73e1eebd7b6c0a
+# Source0-md5:	b21a683bcaa0f78e9157108e6e218d6f
 BuildRequires:	mftrace
 BuildRequires:	tetex-dvips
 BuildRequires:	tetex-fonts-jknappen
+Requires(pre):	/usr/bin/updmap
 Requires:	tetex
 Obsoletes:	ec-fonts-mftraced
 BuildArch:	noarch
@@ -40,6 +41,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %post
 [ ! -x %{_bindir}/texhash ] || %{_bindir}/texhash 1>&2
+updmap --enable Map ec-mftrace.map >/dev/null 2>&1
 
 %postun
 [ ! -x %{_bindir}/texhash ] || %{_bindir}/texhash 1>&2
@@ -49,4 +51,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc ChangeLog LICENSE README
 %{_datadir}/texmf/fonts/type1/public/ec-fonts-mftraced
 %{_datadir}/texmf/fonts/tfm/public/ec-fonts-mftraced
-%{_datadir}/texmf/dvips/ec-fonts-mftraced
+%dir %{_datadir}/texmf/fonts/map
+%dir %{_datadir}/texmf/fonts/map/dvips
+%{_datadir}/texmf/fonts/map/dvips/ec-fonts-mftraced
