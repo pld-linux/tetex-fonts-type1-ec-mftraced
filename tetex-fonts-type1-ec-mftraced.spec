@@ -1,12 +1,12 @@
 Summary:	TeX EC fonts, PostScript Type1 format
 Summary(pl):	Fonty TeXowe EC w formacie PostScript Type1
 Name:		tetex-fonts-type1-ec-mftraced
-Version:	1.0.11
+Version:	1.0.12
 Release:	1
 License:	Public Domain
 Group:		Applications/Publishing
 Source0:	http://lilypond.org/download/fonts/ec-fonts-mftraced-%{version}.tar.gz
-# Source0-md5:	b21a683bcaa0f78e9157108e6e218d6f
+# Source0-md5:	4b355f668ca9cc01677e94c6eecdac40
 BuildRequires:	mftrace
 BuildRequires:	tetex-dvips
 BuildRequires:	tetex-fonts-jknappen
