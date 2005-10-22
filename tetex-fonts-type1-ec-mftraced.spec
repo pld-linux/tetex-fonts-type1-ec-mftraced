@@ -8,7 +8,7 @@ Group:		Applications/Publishing
 Source0:	http://lilypond.org/download/fonts/ec-fonts-mftraced-%{version}.tar.gz
 # Source0-md5:	4b355f668ca9cc01677e94c6eecdac40
 BuildRequires:	mftrace
-BuildRequires:	tetex-dvips
+BuildRequires:	tetex-dvips >= 3.0-1
 BuildRequires:	tetex-fonts-jknappen
 Requires(pre):	/usr/bin/updmap
 Requires:	tetex
@@ -51,6 +51,4 @@ updmap --enable Map ec-mftrace.map >/dev/null 2>&1
 %doc ChangeLog LICENSE README
 %{_datadir}/texmf/fonts/type1/public/ec-fonts-mftraced
 %{_datadir}/texmf/fonts/tfm/public/ec-fonts-mftraced
-%dir %{_datadir}/texmf/fonts/map
-%dir %{_datadir}/texmf/fonts/map/dvips
 %{_datadir}/texmf/fonts/map/dvips/ec-fonts-mftraced
