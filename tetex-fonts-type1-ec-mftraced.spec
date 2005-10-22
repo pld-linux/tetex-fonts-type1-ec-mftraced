@@ -8,7 +8,7 @@ Group:		Applications/Publishing
 Source0:	http://lilypond.org/download/fonts/ec-fonts-mftraced-%{version}.tar.gz
 # Source0-md5:	4b355f668ca9cc01677e94c6eecdac40
 BuildRequires:	mftrace
-BuildRequires:	tetex-dvips >= 3.0-1
+BuildRequires:	tetex-dvips >= 1:3.0-1
 BuildRequires:	tetex-fonts-jknappen
 Requires(pre):	/usr/bin/updmap
 Requires:	tetex
