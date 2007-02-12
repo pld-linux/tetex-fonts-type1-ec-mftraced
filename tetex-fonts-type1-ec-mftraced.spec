@@ -1,5 +1,5 @@
 Summary:	TeX EC fonts, PostScript Type1 format
-Summary(pl.UTF-8):   Fonty TeXowe EC w formacie PostScript Type1
+Summary(pl.UTF-8):	Fonty TeXowe EC w formacie PostScript Type1
 Name:		tetex-fonts-type1-ec-mftraced
 Version:	1.0.12
 Release:	1
