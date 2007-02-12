@@ -1,5 +1,5 @@
 Summary:	TeX EC fonts, PostScript Type1 format
-Summary(pl):	Fonty TeXowe EC w formacie PostScript Type1
+Summary(pl.UTF-8):   Fonty TeXowe EC w formacie PostScript Type1
 Name:		tetex-fonts-type1-ec-mftraced
 Version:	1.0.12
 Release:	1
@@ -20,9 +20,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 These are Type1 renderings of the EC variants of the standard CMR
 family.
 
-%description -l pl
+%description -l pl.UTF-8
 Ten pakiet zawiera wyrenderowane do Type1 warianty EC standardowych
-fontów z rodziny CMR.
+fontÃ³w z rodziny CMR.
 
 %prep
 %setup -q -n ec-fonts-mftraced-%{version}
